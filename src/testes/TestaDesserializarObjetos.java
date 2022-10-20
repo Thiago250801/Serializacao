@@ -14,9 +14,11 @@ public class TestaDesserializarObjetos {
         try(FileInputStream entrada = new FileInputStream("cidade.dat");
             ObjectInputStream desserializador =new ObjectInputStream(entrada)){
 
-            Cidade cidade1 = (Cidade) desserializador.readObject();
+            Cidade cidadesAm = (Cidade) desserializador.readObject();
+            Cidade cidaadesSP = (Cidade) desserializador.readObject();
 
-            System.out.println(cidade1);
+            System.out.println(cidadesAm);
+            System.out.println(cidaadesSP);
 
         }catch(IOException | ClassNotFoundException e){
 
